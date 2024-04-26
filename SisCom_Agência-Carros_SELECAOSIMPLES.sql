@@ -11,28 +11,19 @@
 USE SisCom_AgenciaCarros
 GO
 
--- 1 - Mostra todos os clientes por ordem alfabética de nome
-SELECT clienteNome AS 'Nome do Cliente'
+-- 1 - Mostrar todos os clientes, funcionários, fornecedores, produtos, por ordem alfabética de nome
+SELECT clienteNome
 FROM tbClientes
-ORDER BY clienteNome ASC
-GO
-
--- 1 - Mostra todos os funcionarios por ordem alfabética de nome
-SELECT funcionarioNome AS 'Nome do Funcionário'
+UNION
+SELECT funcionarioNome
 FROM tbFuncionarios
-ORDER BY funcionarioNome ASC
-GO
-
--- 1 - Mostra todos os Fornocedores por ordem alfabética de nome
-SELECT manutencaoEmpresa AS 'Nome da Empresa'
+UNION
+SELECT manutencaoEmpresa
 FROM tbManutencao
-ORDER BY manutencaoEmpresa ASC
-GO 
-
--- 1 - Mostra todos os produtos por ordem alfabética de nome
-SELECT carroModelo AS 'Nome do Carro'
+UNION
+SELECT carroModelo
 FROM tbCarros
-ORDER BY carroModelo ASC
+ORDER BY 1 ASC
 GO
 
 -- 2 - Mostrar as cidades de São Paulo e Rio de Janeiro em ordem alfabética (Nome da cidade e depois estado).
