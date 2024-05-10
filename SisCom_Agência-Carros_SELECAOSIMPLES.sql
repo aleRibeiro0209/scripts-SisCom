@@ -3,8 +3,6 @@
 		Alexandre Ribeiro dos Santos
 		Letícia Vitória Perez Ramos
 		Richard dos Santos Oliveira
-
-    EM ANDAMENTO...
 */
 
 -- Selecionando o Banco de Dados que será utilizado --
@@ -84,6 +82,11 @@ ORDER BY codigoCEP
 GO
 
 -- 9 - Mostre todos os clientes que compraram mais de 3 vezes
+SELECT *
+FROM tbVendas
+WHERE clienteCodigo BETWEEN 1 AND 15
+ORDER BY clienteCodigo
+GO
 
 -- 10 - Mostre os todos os clientes onde a primeira letra do nome é B e a terceira letra é A da cidade de São Paulo ou do Rio de Janeiro.
 SELECT *
